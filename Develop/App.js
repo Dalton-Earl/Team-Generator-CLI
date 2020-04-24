@@ -1,7 +1,5 @@
 const inquirer = require("inquirer");
-
-function promtUser(){
-    const questions = [
+const questions = [
         {
             type: "list",
             name: "role",
@@ -25,7 +23,33 @@ function promtUser(){
         }
 
       ];
-    return inquirer.prompt(questions);
-
+const internPromt = [
+    {
+        type: "input",
+        name: "school",
+        message: "Enter the school the Intern is attending"
+    }
+];
+const EngineerPromt = [
+    {
+        type: "input",
+        name: "githubUsername",
+        message: "Enter the Engineers github username"
+    }
+];
+const managerPromt = [
+    {
+        type: "input",
+        name: "officenumber",
+        message: "Enter the managers office number"
+    }
+];
+function main(){
+    inquirer.prompt(questions).then(answers => {
+        let role = answers.role
+        console.log (role)
+    })
 }
-promtUser();
+   
+main();
+

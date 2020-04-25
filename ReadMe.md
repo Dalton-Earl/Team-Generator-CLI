@@ -1,0 +1,1 @@
+This application is designed to use a command line interface to generate a list of employees in for a company. This uses Javascript classes to pass the test cases. 
